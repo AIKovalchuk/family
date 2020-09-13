@@ -1,0 +1,11 @@
+.benifit {
+    // @import 'default_box_shadow';
+
+    display: flex;
+    flex-direction: column;
+    margin: 3em;
+    padding: 1em;
+    margin: 5em;
+    background-color: $white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}

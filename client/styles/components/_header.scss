@@ -1,0 +1,54 @@
+.header {
+    height: 5em;
+    padding: 0.5em 3em;
+    margin: 0;
+    // border-bottom: 1px solid gray;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+    }
+
+    .auth {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        a {
+            margin-right: 1em;
+        }
+    }
+
+    .block {
+        position: absolute;
+        top: 5.5em;
+        right: 0;
+        z-index: -1;
+        background-color: $buttonColor;
+        width: 100vw;
+        height: 20rem;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            color: $buttonColor;
+            margin: 1em;
+            text-decoration: none;
+            cursor: pointer;
+
+            &:hover {
+                color: $buttonColorHover;
+            }
+
+            &.current {
+                color: $buttonColorClick;
+            }
+        }
+    }
+}
