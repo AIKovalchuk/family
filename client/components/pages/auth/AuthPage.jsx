@@ -4,11 +4,9 @@ import Form from './Form'
 
 const AuthPage = (props) => {
     return (
-        <div>
-            <div></div>
-            <div>
-                <Form />
-            </div>
+        <div className="login">
+            <div className="title">Авторизуйтесь</div>
+            <Form />
         </div>
     )
 }

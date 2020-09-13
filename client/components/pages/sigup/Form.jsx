@@ -4,8 +4,9 @@ import { useFormik } from 'formik'
 import Input from '../../base/fields/Input'
 import Button from '../../base/Button'
 import Router from '../../base/Router'
+import AuthService from '../../../services/Auth'
 
-const Form = (props) => {
+const Form = ({ setIsCode }) => {
     const formik = useFormik({
         initialValues: {
             email: '',
@@ -14,7 +15,9 @@ const Form = (props) => {
             password: '',
             phone: '',
         },
-        onSubmit: (values) => {},
+        onSubmit: (values) => {
+            AuthService.sigup(values).then(setIsCode(true))
+        },
     })
     return (
         <form onSubmit={formik.handleSubmit}>
