@@ -38,7 +38,7 @@ const BenifitsService = {
     },
 
     loadById: (id) => {
-        return new Promise((resolve) => setTimout(resolve, 3000)).then(() => {
+        return new Promise((resolve) => setTimout(resolve, 14)).then(() => {
             return {
                 title: 'Title ' + id,
                 created: '01.04.2020',

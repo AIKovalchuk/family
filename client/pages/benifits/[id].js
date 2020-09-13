@@ -5,9 +5,17 @@ import Axios from 'axios'
 import BenifitsService from '../../services/Benifits'
 
 export default function BenifitPage({ benifit }) {
+    const res = {
+        title: 'Title ',
+        created: '01.04.2020',
+        socialStatus: ['Пенсионеры'],
+        text: 'Оооооооооочень долгий прикаааааззззз',
+        ministere: 'Министерство Важных Дел',
+        benifits: 'тыща',
+    }
     return (
         <SitePage>
-            <Benifit {...benifit} />
+            <Benifit {...res} />
         </SitePage>
     )
 }
@@ -17,5 +25,13 @@ BenifitPage.getInitialProps = async (ctx) => {
     try {
         res = await BenifitsService.loadById(ctx.query.id)
     } catch (e) {}
+    res = {
+        title: 'Title ',
+        created: '01.04.2020',
+        socialStatus: ['Пенсионеры'],
+        text: 'Оооооооооочень долгий прикаааааззззз',
+        ministere: 'Министерство Важных Дел',
+        benifits: 'тыща',
+    }
     return { benifit: res }
 }

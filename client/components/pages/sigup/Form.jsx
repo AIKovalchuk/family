@@ -16,7 +16,9 @@ const Form = ({ setIsCode }) => {
             phone: '',
         },
         onSubmit: (values) => {
-            AuthService.sigup(values).then(setIsCode(true))
+            AuthService.sigup(values)
+                .then(setIsCode(true))
+                .catch((e) => console.log(e))
         },
     })
     return (
