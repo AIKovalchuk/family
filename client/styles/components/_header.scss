@@ -9,9 +9,12 @@
     justify-content: space-between;
     align-items: center;
 
+    .logo {
+    }
+
     .block {
         position: absolute;
-        top: 5em;
+        top: 5.5em;
         right: 0;
         z-index: -1;
         background-color: $buttonColor;
