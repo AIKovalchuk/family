@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import classnames from 'classnames'
 
-const Roter = ({ outline, large, medium, small, disabled, href, children }) => {
+const Router = ({ outline, large, medium, small, disabled, href, children }) => {
     return (
         <Link href={href}>
             <a
@@ -21,10 +21,10 @@ const Roter = ({ outline, large, medium, small, disabled, href, children }) => {
     )
 }
 
-Roter.propTypes = {
+Router.propTypes = {
     children: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
     onClick: PropTypes.func,
 }
 
-export default Roter
+export default Router

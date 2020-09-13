@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Button from '../../../base/Button'
-import Radio from '../fields/Radio'
+import Radio from '../../../base/fields/Radio'
 
 const Invalid = ({}) => {
     const formik = useFormik({

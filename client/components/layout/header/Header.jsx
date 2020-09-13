@@ -8,6 +8,7 @@ const Header = () => {
         <div className="header">
             <Logo />
             <Menu />
+            <div className="block"></div>
         </div>
     )
 }

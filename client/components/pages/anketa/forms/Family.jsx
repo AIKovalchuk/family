@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useFormik } from 'formik'
-import Radio from '../fields/Radio'
+import Radio from '../../../base/fields/Radio'
 import Button from '../../../base/Button'
 
 const Family = ({ onSubmit }) => {

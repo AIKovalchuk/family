@@ -6,13 +6,18 @@ import Start from './forms/Start'
 import University from './forms/University'
 import War from './forms/War'
 import Work from './forms/Work'
+import WorldWar from './forms/WorldWar'
 
 const Anketa = () => {
     const [type, setType] = useState('START')
     const [anketa, setAnketa] = useState({})
     const [queue, setQueue] = useState([])
+    const [count, setCount] = useState(0)
+
     const onNext = (values, nextForm) => {
         console.log(values, nextForm)
+
+        setCount(count + 1)
         setAnketa({ ...anketa, ...values })
         if (nextForm.length) {
             setType(nextForm[0])
@@ -26,7 +31,6 @@ const Anketa = () => {
     const [form, setForm] = useState(<Start onSubmit={onNext} />)
 
     useEffect(() => {
-        console.log(type, queue)
         switch (type) {
             case 'START':
                 setForm(<Start onSubmit={onNext} />)
@@ -46,6 +50,9 @@ const Anketa = () => {
             case 'WAR':
                 setForm(<War onSubmit={onNext} />)
                 break
+            case 'WORLD_WAR':
+                setForm(<WorldWar onSubmit={onNext} />)
+                break
             case 'FINAL':
                 setForm(<Finally form={anketa} />)
                 break
@@ -59,8 +66,16 @@ const Anketa = () => {
     return (
         <div className="anketa">
             <div className="anketa__header">
-                <h2>Заполните все поля, чтобы мы могли побобрать для Вас льготы</h2>
-                <h5>Поля отмечанные * обязательны для заполнения</h5>
+                <div className="indicate">
+                    {[...new Array(count + queue.length)].map((val, ind) => {
+                        console.log(count, queue.length)
+                        if (ind < count) {
+                            return <div className="complete"></div>
+                        }
+                        return <div className="none-complete"></div>
+                    })}
+                </div>
+                <h2>Заполните все поля, чтобы мы могли подобрать для Вас льготы</h2>
             </div>
             <div className="anketa__wrapper">{form}</div>
         </div>

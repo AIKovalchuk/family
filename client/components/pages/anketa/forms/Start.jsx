@@ -1,7 +1,7 @@
 import React from 'react'
 import { useFormik } from 'formik'
-import Input from '../fields/Input'
-import Radio from '../fields/Radio'
+import Input from '../../../base/fields/Input'
+import Radio from '../../../base/fields/Radio'
 import Button from '../../../base/Button'
 import DatePicker from 'react-datepicker'
 
@@ -14,8 +14,11 @@ const Start = ({ onSubmit }) => {
         },
         onSubmit: (values) => {
             let nextForms = []
-            if (new Date().getFullYear() - new Date(values.birthday).getFullYear() > 19) {
-                nextForms = ['WAR']
+            if (new Date().getFullYear() - new Date(values.birthday).getFullYear() > 23) {
+                nextForms = [...nextForms, 'WAR']
+            }
+            if (new Date().getFullYear() - new Date(values.birthday).getFullYear() > 85) {
+                nextForms = [...nextForms, 'WORLD_WAR']
             }
             switch (formik.values.socialStatus) {
                 case 'Дошкольник':
@@ -47,13 +50,20 @@ const Start = ({ onSubmit }) => {
     })
     return (
         <form onSubmit={formik.handleSubmit}>
-            <label htmlFor="birthday">{'День рождения'}</label>
+            {/* <label htmlFor="birthday">{'День рождения'}</label>
             <DatePicker
                 id="birthday"
                 selected={formik.values.birthday}
                 onChange={(e) => {
                     formik.setValues({ ...formik.values, birthday: e })
                 }}
+            /> */}
+            <Input
+                id="birthday"
+                label={'Укажите дату рождения'}
+                type="date"
+                value={formik.values.birthday}
+                onChange={formik.handleChange}
             />
             <Radio
                 id="sex"
@@ -77,7 +87,9 @@ const Start = ({ onSubmit }) => {
                 ]}
                 onChange={formik.handleChange}
             />
-            <Button small>Далее</Button>
+            <div className="controls">
+                <Button small>Далее</Button>
+            </div>
         </form>
     )
 }

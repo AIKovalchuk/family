@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useFormik } from 'formik'
-import Radio from '../fields/Radio'
-import Input from '../fields/Input'
+import Radio from '../../../base/fields/Radio'
+import Input from '../../../base/fields/Input'
 import Button from '../../../base/Button'
 
 const Work = ({ onSubmit }) => {

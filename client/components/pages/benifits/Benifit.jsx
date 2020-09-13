@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Roter from '../../base/Roter'
+import Router from '../../base/Router'
 
 const Benifit = ({ title, createdAt, socialStatus, text, ministere, benifits }) => {
     return (
@@ -18,7 +18,7 @@ const Benifit = ({ title, createdAt, socialStatus, text, ministere, benifits }) 
                 <div>{`Льгота: ${benifits}`}</div>
             </div>
             <div className="__footer">
-                <Roter href="/">Оформить</Roter>
+                <Router href="/">Оформить</Router>
             </div>
         </div>
     )

@@ -1,8 +1,8 @@
 import { useFormik } from 'formik'
 import React from 'react'
 import Button from '../../../base/Button'
-import Input from '../fields/Input'
-import Radio from '../fields/Radio'
+import Input from '../../../base/fields/Input'
+import Radio from '../../../base/fields/Radio'
 
 const University = ({ onSubmit }) => {
     const formik = useFormik({

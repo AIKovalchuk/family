@@ -1,0 +1,24 @@
+.benifits {
+    display: flex;
+    flex-direction: column;
+    margin: 3em;
+
+    .title {
+        font-size: 36px;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+
+        .item {
+            @include default_box_shadow;
+            @include default_block_shadow_hover;
+            padding: 0 25px;
+            font-size: 20px;
+            line-height: 70px;
+            height: 70px;
+            margin: 0.3em 0;
+        }
+    }
+}

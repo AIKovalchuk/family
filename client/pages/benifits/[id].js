@@ -1,20 +1,21 @@
 import { SitePage } from '../../components/pages/SitePage'
 import { useRouter } from 'next/router'
 import Benifit from '../../components/pages/benifits/Benifit'
+import Axios from 'axios'
+import BenifitsService from '../../services/Benifits'
 
-export default function Index(params) {
-    const router = useRouter()
-    const template = {
-        title: 'Title',
-        created: '01.04.2020',
-        socialStatus: ['Пенсионеры'],
-        text: 'Оооооооооочень долгий прикаааааззззз',
-        ministere: 'Министерство Важных Дел',
-        benifits: 'тыща',
-    }
+export default function BenifitPage({ benifit }) {
     return (
         <SitePage>
-            <Benifit {...template} />
+            <Benifit {...benifit} />
         </SitePage>
     )
+}
+BenifitPage.getInitialProps = async (ctx) => {
+    console.log(ctx.query)
+    let res = {}
+    try {
+        res = await BenifitsService.loadById(ctx.query.id)
+    } catch (e) {}
+    return { benifit: res }
 }
