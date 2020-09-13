@@ -1,8 +1,0 @@
-{
-  "properties": [
-    {
-      "name": "zuul.host.socket-timeout-millis",
-      "type": "java.lang.String",
-      "description": "Description for zuul.host.socket-timeout-millis."
-  }
-] }
