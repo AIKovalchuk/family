@@ -11,58 +11,58 @@ const Main = () => {
             path: 'http://guides.gosuslugi.ru/download.html?file=/765/22.svg&dl=0',
             name: 'Tooltip',
             fill: '#5CC4CA',
-            href: '/',
+            href: '/benifits',
         },
         {
             path: 'http://guides.gosuslugi.ru/download.html?file=/765/23.svg&dl=0',
             name: 'Tooltip',
             fill: '#5CC4CA',
-            href: '/',
+            href: '/benifits',
         },
         {
             path: 'http://guides.gosuslugi.ru/download.html?file=/765/16.svg&dl=0',
             name: 'Tooltip',
             fill: '#5CC4CA',
-            href: '/',
+            href: '/benifits',
         },
         {
             path: 'http://guides.gosuslugi.ru/download.html?file=/765/17.svg&dl=0',
             name: 'Tooltip',
             fill: '#5CC4CA',
-            href: '/',
+            href: '/benifits',
         },
         {
             path: 'http://guides.gosuslugi.ru/download.html?file=/765/22.svg&dl=0',
             name: 'Tooltip',
             fill: '#5CC4CA',
-            href: '/',
+            href: '/benifits',
         },
         {
             path: 'http://guides.gosuslugi.ru/download.html?file=/765/18.svg&dl=0',
             name: 'Tooltip',
             fill: '#5CC4CA',
-            href: '/',
+            href: '/benifits',
         },
         {
             path: 'http://guides.gosuslugi.ru/download.html?file=/765/9.svg&dl=0',
             name: 'Tooltip',
             fill: '#5CC4CA',
-            href: '/',
+            href: '/benifits',
         },
         {
             path: 'http://guides.gosuslugi.ru/download.html?file=/765/29.svg&dl=0',
             name: 'Tooltip',
             fill: '#5CC4CA',
-            href: '/',
+            href: '/benifits',
         },
     ]
     return (
         <div className="main">
             <h1>{title}</h1>
             <div className="content">
-                <div className="description">
+                {/* <div className="description">
                     <span>{description}</span>
-                </div>
+                </div> */}
                 <div className="control">
                     <Router large href="anketa">
                         Заполнить анкету
@@ -72,7 +72,7 @@ const Main = () => {
                     </Router>
                 </div>
             </div>
-            <div className="sub-title">Льготы: </div>
+            {/* <div className="sub-title">Льготы: </div> */}
             <div className="benifits">
                 {benifits.map((item) => {
                     return <Item {...item} />

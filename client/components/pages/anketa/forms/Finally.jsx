@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import Button from '../../../base/Button'
+import FormService from '../../../../services/Form'
 
 const Finally = ({ form }) => {
     const Fetch = async () => {
@@ -13,6 +14,7 @@ const Finally = ({ form }) => {
     useEffect(() => {
         Fetch()
     }, [])
+
     return (
         <div className="finally">
             <div>Вы заполнили анкету!</div>
