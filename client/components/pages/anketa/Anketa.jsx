@@ -31,6 +31,7 @@ const Anketa = () => {
     const [form, setForm] = useState(<Start onSubmit={onNext} />)
 
     useEffect(() => {
+        console.log('ANKETA ', anketa)
         switch (type) {
             case 'START':
                 setForm(<Start onSubmit={onNext} />)

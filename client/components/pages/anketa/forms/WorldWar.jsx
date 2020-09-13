@@ -21,7 +21,7 @@ const WorldWar = ({ onSubmit }) => {
             <Radio
                 id="isWW"
                 label="Вы участвовали в Великой Отечественной войне?"
-                value={formik.values.sex}
+                value={formik.values.isWW}
                 list={['Да', 'Нет']}
                 onChange={formik.handleChange}
             />

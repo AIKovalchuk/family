@@ -43,7 +43,7 @@ const Maried = ({ onSubmit }) => {
                     onChange={formik.handleChange}
                 />
             )}
-            {formik.values.haveChildren !== 'Нет' && (
+            {/* {formik.values.haveChildren !== 'Нет' && (
                 <Input
                     type="number"
                     id="countChildren"
@@ -51,7 +51,7 @@ const Maried = ({ onSubmit }) => {
                     value={formik.values.countChildren}
                     onChange={formik.handleChange}
                 />
-            )}
+            )} */}
             <Button small>Далее</Button>
         </form>
     )

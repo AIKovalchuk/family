@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import Button from '../../../base/Button'
-import Axios from 'axios'
 
 const Finally = ({ form }) => {
     const Fetch = async () => {
         try {
-            const res = await Axios.post('', { form: form })
+            console.log(form)
+            const res = await FormService.sendForm(form)
         } catch (e) {}
     }
+
+    useEffect(() => {
+        Fetch()
+    }, [])
     return (
         <div className="finally">
             <div>Вы заполнили анкету!</div>
