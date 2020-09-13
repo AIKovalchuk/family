@@ -60,7 +60,9 @@ const Main = () => {
         <div className="main">
             <h1>{title}</h1>
             <div className="content">
-                <div className="description">{description}</div>
+                <div className="description">
+                    <span>{description}</span>
+                </div>
                 <div className="control">
                     <Router large href="anketa">
                         Заполнить анкету
